@@ -2,8 +2,8 @@ import { HomeIcon, ShoppingCartIcon, UserIcon } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="text-white">
-      <section className="bg-primary">
+    <footer className="mb-16 text-white md:mb-0">
+      <section className="bg-primary hidden md:block">
         <div className="container mx-auto py-4 text-center text-xs">
           <div>تماس با پشتیبانی :۰۲۱-۳۴۵۶۰۰۰</div>
           <div>پاسخگویی ۲۴ ساعته ، ۷ روز هفته </div>
