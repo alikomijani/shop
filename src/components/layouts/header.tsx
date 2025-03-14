@@ -1,9 +1,7 @@
-import { OutlineMenuIcon } from "@/icons/outline-menu";
 import { Input } from "@/components/ui/input";
 import { MobileLogoIcon } from "@/icons/mobile-logo";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { Button } from "../ui/button";
 import { DesktopLogoIcon } from "@/icons/desktop-logo";
+import MobileMenu from "./mobile-menu";
 
 export function Header() {
   return (
@@ -15,30 +13,11 @@ export function Header() {
         <div className="p-2 md:p-5">
           <div className="container mx-auto flex items-center justify-between gap-2">
             {/* Mobile Menu */}
-            <div className="md:hidden">
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon">
-                    <OutlineMenuIcon className="size-6" />
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="right">
-                  <nav className="flex flex-col gap-4 p-4">
-                    <a href="/" className="text-lg font-medium">
-                      خانه
-                    </a>
-                    <a href="/about" className="text-lg font-medium">
-                      درباره ما
-                    </a>
-                  </nav>
-                </SheetContent>
-              </Sheet>
-            </div>
+            <MobileMenu />
             {/* Desktop Menu */}
             <div className="hidden w-36 shrink-0 md:block">
               <DesktopLogoIcon className="h-9 w-full" />
             </div>
-
             <Input
               type="search"
               placeholder="جستجو"
